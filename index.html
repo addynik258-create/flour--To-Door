@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Flour to Door</title>
+
+<style>
+body {
+    font-family: 'Montserrat', 'open sans';
+    margin: 0;
+    background: #f8f9fa;
+    font-size: 18px;
+}
+
+/* HEADER */
+header {
+    background: url("farm.jpg") no-repeat center center/cover;
+    height: 300px;
+    color: white;
+    text-align: center;
+}
+
+.overlay {
+    background: rgba(0,0,0,0.5);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+header h1 {
+    font-size: 60px;
+}
+
+/* NAV */
+nav {
+    background: black;
+    padding: 15px;
+    text-align: center;
+}
+nav a {
+    color: white;
+    margin: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* SECTION */
+section {
+    padding: 40px;
+    margin: 30px;
+    background: white;
+    border-radius: 12px;
+}
+
+/* CARDS */
+.cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 200px;
+    text-align: center;
+    padding: 15px;
+    background: #eef2f7;
+    cursor: pointer;
+    position: relative;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* TICK */
+.tick {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: green;
+    color: white;
+    border-radius: 50%;
+    padding: 5px;
+    display: none;
+}
+
+/* INPUT */
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+}
+
+/* BUTTON */
+button {
+    padding: 12px;
+    background: black;
+    color: white;
+    border: none;
+    width: 100%;
+}
+
+/* SUMMARY */
+.summary {
+    background: #e9f1ff;
+    padding: 20px;
+    margin-top: 15px;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+<div class="overlay">
+<h1>🌾 FLOUR TO DOOR 🌾</h1>
+<p>Pure • Safe • Direct from Farmers</p>
+</div>
+</header>
+
+<nav>
+<a href="#about">About</a>
+<a href="#products">Products</a>
+<a href="#order">Order</a>
+<a href="#track">Track</a>
+<a href="#help">Help</a>
+</nav>
+
+<!-- ABOUT -->
+<section id="about">
+
+<h2>About Our Service</h2>
+
+<p>
+At Flour to Door, we are committed to delivering premium-quality wheat and flour products directly from trusted farms to your doorstep. 
+Our mission is to provide healthy, hygienic, and nutrient-rich flour while supporting local farmers and maintaining complete transparency in quality standards.
+</p>
+
+<p>
+Every batch of wheat goes through strict inspection, cleaning, testing, and hygienic processing before packaging. 
+We ensure that customers receive fresh products free from harmful chemicals, excessive preservatives, and impurities.
+</p>
+
+<p>
+Our wheat varieties are sourced from selected farms known for sustainable agricultural practices and superior grain quality. 
+The grains are carefully stored under controlled conditions to preserve freshness, nutrition, and natural taste.
+</p>
+
+<h3>🌾 Quality Index Report</h3>
+
+<table border="1" width="100%" cellpadding="10" cellspacing="0">
+
+<tr>
+<th>Quality Parameter</th>
+<th>Standard Value</th>
+<th>Status</th>
+</tr>
+
+<tr>
+<td>Grain Purity</td>
+<td>98% – 99%</td>
+<td>Passed ✔</td>
+</tr>
+
+<tr>
+<td>Moisture Level</td>
+<td>Below 12%</td>
+<td>Safe ✔</td>
+</tr>
+
+<tr>
+<td>Chemical Residue</td>
+<td>Minimal / Safe Limit</td>
+<td>Certified ✔</td>
+</tr>
+
+<tr>
+<td>Nutritional Quality</td>
+<td>High Fiber & Iron</td>
+<td>Verified ✔</td>
+</tr>
+
+<tr>
+<td>Storage Hygiene</td>
+<td>Temperature Controlled</td>
+<td>Maintained ✔</td>
+</tr>
+
+<tr>
+<td>Packaging Safety</td>
+<td>Food Grade Packaging</td>
+<td>Approved ✔</td>
+</tr>
+
+</table>
+
+<br>
+
+<h3>📜 Product Certification & Authentication</h3>
+
+<div style="border:2px solid black; padding:20px; background:#f4f4f4;">
+
+<h2 style="text-align:center;">CERTIFICATE OF QUALITY AUTHENTICATION</h2>
+
+<p><b>Certified Organization:</b> Flour to Door Food Quality Department</p>
+
+<p><b>Certification ID:</b> FTD-2026-QA-45821</p>
+
+<p><b>Product Category:</b> Premium Wheat & Flour Products</p>
+
+<p><b>Inspection Authority:</b> Food Safety & Agricultural Standards Board</p>
+
+<p><b>Safety Compliance:</b> FSSAI Approved ✔</p>
+
+<p><b>Organic Verification:</b> Selected products verified under organic farming standards ✔</p>
+
+<p><b>Laboratory Testing:</b> Successfully passed purity, hygiene, and nutritional testing ✔</p>
+
+<p><b>Authenticity Status:</b> Verified Farm-Sourced Wheat ✔</p>
+
+<p>
+This certificate confirms that the wheat products supplied by Flour to Door 
+meet the required food safety, hygiene, and agricultural quality standards.
+</p>
+
+<br>
+
+<p><b>Authorized Signature:</b> ____________________</p>
+
+<p><b>Date of Verification:</b> 06 May 2026</p>
+
+</div>
+
+</section>
+
+<!-- PRODUCTS -->
+<section id="products">
+<h2>Select Wheat Type</h2>
+
+<div class="cards">
+
+<!-- SHARBATI -->
+<div class="card" onclick="toggleSelect(this,'Sharbati')">
+<div class="tick">✔</div>
+
+<img src="sharbati.jpg">
+
+<h3>Sharbati</h3>
+
+<p>Premium wheat with sweet taste and soft rotis.</p>
+
+<p><b>Price:</b> ₹35/KG</p>
+
+<p><b>Quality:</b> Best Taste</p>
+
+</div>
+
+<!-- LOKWAN -->
+<div class="card" onclick="toggleSelect(this,'Lokwan')">
+<div class="tick">✔</div>
+
+<img src="lokwan.jpg">
+
+<h3>Lokwan</h3>
+
+<p>Affordable wheat suitable for daily household use.</p>
+
+<p><b>Price:</b> ₹30/KG</p>
+
+<p><b>Quality:</b> Budget Friendly</p>
+
+</div>
+
+<!-- DURUM -->
+<div class="card" onclick="toggleSelect(this,'Durum')">
+<div class="tick">✔</div>
+
+<img src="durum.jpg">
+
+<h3>Durum</h3>
+
+<p>Hard wheat variety rich in protein and nutrients.</p>
+
+<p><b>Price:</b> ₹40/KG</p>
+
+<p><b>Quality:</b> High Protein</p>
+
+</div>
+
+<!-- ORGANIC -->
+<div class="card" onclick="toggleSelect(this,'Organic')">
+<div class="tick">✔</div>
+
+<img src="organic.jpg">
+
+<h3>Organic</h3>
+
+<p>Chemical-free wheat grown using natural farming methods.</p>
+
+<p><b>Price:</b> ₹45/KG</p>
+
+<p><b>Quality:</b> Healthiest Choice</p>
+
+</div>
+
+<!-- KHAPLI -->
+<div class="card" onclick="toggleSelect(this,'Khapli')">
+<div class="tick">✔</div>
+
+<img src="Khapli.jpg">
+
+<h3>Khapli</h3>
+
+<p>Ancient wheat variety with high fiber and low glycemic index.</p>
+
+<p><b>Price:</b> ₹50/KG</p>
+
+<p><b>Quality:</b> Sugar Controlled</p>
+
+</div>
+
+<!-- KALYAN SONA -->
+<div class="card" onclick="toggleSelect(this,'Kalyan Sona')">
+<div class="tick">✔</div>
+
+<img src="kalyan sona.jpg">
+
+<h3>Kalyan Sona</h3>
+
+<p>Nutritious wheat with excellent adaptability and protein levels.</p>
+
+<p><b>Price:</b> ₹55/KG</p>
+
+<p><b>Quality:</b> Good Protein</p>
+
+</div>
+
+<!-- HERO -->
+<div class="card" onclick="toggleSelect(this,'Hero')">
+<div class="tick">✔</div>
+
+<img src="hero.jpg">
+
+<h3>Hero</h3>
+
+<p>Soft textured wheat ideal for baking and fluffy rotis.</p>
+
+<p><b>Price:</b> ₹40/KG</p>
+
+<p><b>Quality:</b> Baking Strength</p>
+
+</div>
+
+<!-- SONA MOTI -->
+<div class="card" onclick="toggleSelect(this,'Sona Moti')">
+<div class="tick">✔</div>
+
+<img src="sona moti.jpg">
+
+<h3>Sona Moti</h3>
+
+<p>Low gluten superfood wheat packed with nutrition.</p>
+
+<p><b>Price:</b> ₹55/KG</p>
+
+<p><b>Quality:</b> Super Food</p>
+
+</div>
+
+</div>
+<p id="selectedList"></p>
+</section>
+
+<!-- ORDER -->
+<section id="order">
+<h2>Order Details</h2>
+
+<div id="dynamicInputs"></div>
+
+<h3>Delivery Address</h3>
+
+<input type="text" id="name" placeholder="Full Name">
+<input type="text" id="house" placeholder="House / Flat No">
+<input type="text" id="area" placeholder="Area">
+<input type="text" id="city" placeholder="City">
+<input type="text" id="pincode" placeholder="Pincode">
+
+<h3>💳 Payment Method</h3>
+<select id="payment">
+<option value="">Select Payment</option>
+<option>GPay</option>
+<option>PhonePe</option>
+<option>Cash on Delivery</option>
+</select>
+
+<button onclick="placeOrder()">Place Order</button>
+
+<div id="summary" class="summary"></div>
+</section>
+
+<!-- TRACK -->
+<section id="track">
+<h2>Track Your Order</h2>
+
+<input type="text" id="trackId" placeholder="Enter Order ID">
+<button onclick="trackOrder()">Track</button>
+
+<div id="trackingStatus"></div>
+</section>
+
+<!-- HELP -->
+<section id="help">
+
+<h2>Help Center</h2>
+
+<p>
+Welcome to the Flour to Door Help Center. 
+We are committed to providing a smooth and reliable experience to all our customers. 
+If you face any issues related to orders, delivery, payments, product quality, or tracking, our support team is always ready to assist you.
+</p>
+
+<h3>📞 Customer Support</h3>
+
+<p>
+<b>Customer Care Number:</b> +91 9876543210<br>
+<b>Alternate Support:</b> +91 9823456780<br>
+<b>Support Timing:</b> Monday to Saturday (9:00 AM – 8:00 PM)
+</p>
+
+<h3>📧 Email Support</h3>
+
+<p>
+<b>General Queries:</b> support@flourtodoor.com<br>
+<b>Order Related Issues:</b> orders@flourtodoor.com<br>
+<b>Farmer & Partnership Support:</b> farmers@flourtodoor.com
+</p>
+
+<h3>🚚 Delivery Support</h3>
+
+<p>
+✔ Real-time order tracking available<br>
+✔ Delivery within 2–4 working days<br>
+✔ Safe and hygienic packaging<br>
+✔ Quick replacement for damaged products
+</p>
+
+<h3>💳 Payment Support</h3>
+
+<p>
+We support multiple secure payment methods:
+</p>
+
+<ul>
+<li>Google Pay (GPay)</li>
+<li>PhonePe</li>
+<li>Cash on Delivery (COD)</li>
+</ul>
+
+<p>
+All online payments are processed through secure payment gateways to ensure customer safety and privacy.
+</p>
+
+<h3>❓ Frequently Asked Questions (FAQs)</h3>
+
+<p>
+<b>Q. How can I track my order?</b><br>
+Enter your Order ID in the Track Order section to check your delivery status.
+</p>
+
+<p>
+<b>Q. What if I receive damaged packaging?</b><br>
+Contact our support team within 24 hours for replacement assistance.
+</p>
+
+<p>
+<b>Q. Are your wheat products chemical-free?</b><br>
+Yes, selected varieties are organically grown and all products go through quality checks.
+</p>
+
+<h3>🌐 Follow Us</h3>
+
+<p>
+📸 Instagram: @flourtodoor<br>
+📘 Facebook: Flour To Door Official<br>
+🐦 Twitter/X: @flourtodoor
+</p>
+
+<h3>🏢 Office Address</h3>
+
+<p>
+Flour to Door Pvt. Ltd.<br>
+College Road, Nashik<br>
+Maharashtra, India – 422005
+</p>
+
+</section>
+<script>
+
+let selectedItems = [];
+let generatedID = "";
+let currentOrderId = "";
+
+function toggleSelect(card, type) {
+
+    let tick = card.querySelector(".tick");
+
+    if (selectedItems.includes(type)) {
+        selectedItems = selectedItems.filter(item => item !== type);
+        tick.style.display = "none";
+    } else {
+        selectedItems.push(type);
+        tick.style.display = "block";
+    }
+
+    document.getElementById("selectedList").innerText =
+    "Selected: " + selectedItems.join(", ");
+
+    generateInputs();
+}
+
+function generateInputs() {
+
+    let container = document.getElementById("dynamicInputs");
+    container.innerHTML = "";
+
+    selectedItems.forEach(item => {
+
+        let price = 30;
+        if (item === "Sharbati") price = 35;
+        if (item === "Lokwan") price = 30;
+        if (item === "Durum") price = 40;
+        if (item === "Organic") price = 50;
+        if (item === "hero") price = 40;
+        if (item === "kalyan sona") price = 55;
+        if (item === "Khapli") price = 50;
+        if (item === "sona moti") price = 55;
+
+        container.innerHTML += `
+        <label>${item} (₹${price}/KG)</label>
+        <input type="number" id="${item}" oninput="calculateTotal()">
+
+        <label>Flour Type</label>
+        <select id="${item}_type">
+        <option value="">Select Type</option>
+        <option>Fine</option>
+        <option>Medium</option>
+        <option>Coarse</option>
+        </select>
+
+        <p id="${item}_price">Price: ₹0</p>
+        <hr>
+        `;
+    });
+
+    container.innerHTML += `<h3>Total: ₹<span id="liveTotal">0</span></h3>`;
+}
+
+function calculateTotal() {
+
+    let total = 0;
+
+    selectedItems.forEach(item => {
+
+        let qty = document.getElementById(item).value || 0;
+
+        let price = 30;
+        if (item === "Sharbati") price = 35;
+        if (item === "Lokwan") price = 30;
+        if (item === "Durum") price = 40;
+        if (item === "Organic") price = 50;
+        if (item === "hero") price = 40;
+        if (item === "kalyan sona") price = 55;
+        if (item === "Khapli") price = 50;
+        if (item === "sona moti") price = 55;
+        let cost = qty * price;
+        total += cost;
+
+        document.getElementById(item + "_price").innerText =
+        "Price: ₹" + cost;
+    });
+
+    document.getElementById("liveTotal").innerText = total;
+}
+
+async function placeOrder() {
+
+    let name = document.getElementById("name").value;
+    let house = document.getElementById("house").value;
+    let area = document.getElementById("area").value;
+    let city = document.getElementById("city").value;
+    let pincode = document.getElementById("pincode").value;
+    let payment = document.getElementById("payment").value;
+
+    if (selectedItems.length === 0 || name === "" || payment === "") {
+        alert("Fill all details!");
+        return;
+    }
+
+    let total = 0;
+    let summaryText = "";
+    let orderItems = [];
+
+    selectedItems.forEach(item => {
+
+        let qty = document.getElementById(item).value;
+        let type = document.getElementById(item + "_type").value;
+
+        let pricePerKg = 30;
+
+        if (item === "Sharbati") pricePerKg = 35;
+        if (item === "Lokwan") pricePerKg = 30;
+        if (item === "Durum") pricePerKg = 40;
+        if (item === "Organic") pricePerKg = 45;
+        if (item === "Khapli") pricePerKg = 50;
+        if (item === "Hero") pricePerKg = 40;
+        if (item === "Kalyan Sona") pricePerKg = 55;
+        if (item === "Sona Moti") pricePerKg = 55;
+
+        let price = qty * pricePerKg;
+
+        total += price;
+
+        summaryText += `
+        ${item} (${type}) - ${qty} KG = ₹${price}<br>
+        `;
+
+        orderItems.push({
+            item,
+            qty,
+            type,
+            price
+        });
+
+    });
+
+    let orderData = {
+        customerName: name,
+        address: {
+            house,
+            area,
+            city,
+            pincode
+        },
+        paymentMethod: payment,
+        totalAmount: total,
+        items: orderItems
+    };
+
+    try {
+
+        let response = await fetch("http://localhost:5000/place-order", {
+
+            method: "POST",
+
+            headers: {
+                "Content-Type": "application/json"
+            },
+
+            body: JSON.stringify(orderData)
+
+        });
+
+        let data = await response.json();
+
+        let paymentStatus =
+        payment === "Cash on Delivery"
+        ? "COD / To Be Paid"
+        : "Paid";
+
+        document.getElementById("summary").innerHTML =
+
+        "<h2>🧾 BILL</h2>" +
+
+        "<b>Order ID:</b> " + data.orderId + "<br><br>" +
+
+        "<b>Name:</b> " + name + "<br>" +
+
+        "<b>Address:</b> " +
+        house + ", " + area + ", " + city + " - " + pincode + "<br><br>" +
+
+        summaryText +
+
+        "<hr><b>Total:</b> ₹" + total + "<br>" +
+
+        "<b>Payment:</b> " + payment + "<br>" +
+
+        "<b>Status:</b> " + paymentStatus;
+
+    } catch(error) {
+
+        alert("Server Error");
+
+        console.log(error);
+
+    }
+}
+async function trackOrder() {
+
+    let input = document.getElementById("trackId").value;
+
+    try {
+
+        let response = await fetch(
+            "http://localhost:5000/track-order/" + input
+        );
+
+        let data = await response.json();
+
+        if (data.success) {
+
+            document.getElementById("trackingStatus").innerHTML =
+
+            "✔ Order Placed<br>" +
+            "✔ Processing<br>" +
+            "⏳ Out for Delivery<br>" +
+            "⬜ Delivered<br><br>" +
+
+            "<b>Customer:</b> " + data.order.customerName + "<br>" +
+            "<b>Total:</b> ₹" + data.order.totalAmount + "<br>" +
+            "<b>Payment:</b> " + data.order.paymentMethod;
+
+        } else {
+
+            document.getElementById("trackingStatus").innerHTML =
+            "❌ Invalid Order ID";
+
+        }
+
+    } catch(error) {
+
+        console.log(error);
+
+        alert("Tracking Server Error");
+
+    }
+}
+
+
+</script>
+
+</body>
+</html>

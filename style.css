@@ -1,0 +1,96 @@
+body {
+margin:0;
+font-family:Arial;
+background:white;
+color:black;
+scroll-behavior:smooth;
+}
+
+/* NAV */
+nav {
+display:flex;
+justify-content:space-between;
+padding:15px;
+background:white;
+border-bottom:1px solid white;
+position:sticky;
+top:0;
+}
+
+nav h1 {
+font-weight:bold;
+color:black;
+}
+
+nav a {
+color:black;
+margin:10px;
+text-decoration:none;
+}
+
+/* HERO */
+.farm {
+height:90vh;
+background:url('images/farm.jpg') center/cover no-repeat;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.hero h1 {
+font-size:70px;
+font-weight:bold;
+color:black;
+background:white(0,0,0,0.5);
+padding:10px 20px;
+}
+
+/* SECTION */
+section {
+padding:40px;
+text-align:center;
+}
+
+/* PRODUCTS */
+#productContainer {
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.card {
+border:1px solid black;
+margin:10px;
+padding:15px;
+width:220px;
+transition:0.3s;
+}
+
+.card img {
+width:100%;
+}
+
+.card.selected {
+border:3px solid lime;
+}
+
+/* INPUT */
+input, select {
+display:block;
+margin:10px auto;
+padding:10px;
+width:200px;
+background:white;
+color:black;
+border:1px solid white;
+}
+
+/* BUTTON */
+button {
+padding:10px;
+background:white;
+color:black;
+border:none;
+cursor:pointer;
+margin:10px;
+}
